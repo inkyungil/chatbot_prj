@@ -1,0 +1,1435 @@
+body{margin:0}
+/*  ==========================================================================
+	@ COMMON.CSS
+	========================================================================== */
+	:root
+	{
+		--theme-primary        : #1a91dd;
+		--theme-secondary      : #000000;
+ 
+		--theme-white          : #ffffff;
+		--theme-black          : #333333;
+	}
+	::-moz-selection {
+		background:var(--theme-primary);
+		color:var(--theme-white);
+	}
+	::selection {
+		background:var(--theme-primary);
+		color:var(--theme-white);
+	}
+	* {
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		box-sizing:border-box;
+		-webkit-appearance: none;
+		-webkit-text-size-adjust:none;
+		-webkit-font-smoothing:subpixel-antialiased;
+		-webkit-overflow-scrolling:touch;
+	}
+/*  ==========================================================================
+	@ INIT
+	========================================================================== */
+	html,body {
+		font-family:'Noto Sans Korean',sans-serif !important;
+		font-weight:400;
+		color:var(--theme-black);
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p {
+		margin:0;
+		padding:0;
+	}
+	ul,
+	ol,
+	dl,
+	dt,
+	dd {
+		padding:0;
+		margin:0;
+	}
+	li {
+		list-style:none;
+		margin-top: 5px;
+	}
+	a {
+		vertical-align:middle;
+		text-decoration:none;
+	}
+	i {
+		vertical-align:middle;
+	}
+	span {
+		vertical-align:middle;
+	}
+	img {
+		max-width:100%;
+		height:auto;
+		vertical-align:middle;
+	}
+	input,
+	textarea,
+	select {
+		outline:none;
+		border-radius:0;
+		vertical-align:middle;
+	}
+	button {
+		border:none;
+		outline:none;
+		background-color:transparent;
+		padding:0;
+		vertical-align:middle;
+		cursor:pointer;
+	}
+	table {
+		padding:0; 
+		border-spacing:0px; 
+		border:0; 
+		border-collapse:collapse;
+	}
+	caption,
+	legend {
+		display:none;
+	}
+	fieldset {
+		margin:0;
+		padding:0;
+		border:none;
+	}
+/*  ==========================================================================
+	@ TAGS
+	========================================================================== */
+	h1 {
+		font-size:22px;
+		margin-bottom:15px;
+	}
+	h2 {
+		font-size:20px;
+		margin-bottom:15px;
+	}
+	h3 {
+		font-size:18px;
+		margin-bottom:15px;
+	}
+	h4 {
+		font-size:16px;
+		margin-bottom:15px;
+	}
+	h5 {
+		font-size:14px;
+		margin-bottom:15px;
+	}
+	h6 {
+		font-size:13px;
+		margin-bottom:15px;
+	}
+	p {
+		line-height:18px;
+		/*text-align:justify;*/
+	}
+	a {
+		position:relative;
+		display:inline-block;
+		/*color:var(--theme-black);*/
+		margin-left:5px;
+	}
+	a:first-child {
+		margin-left:0;
+	}
+	a:hover {
+		color:var(--theme-primary);
+	}
+	i {
+		font-size:35px;
+	} 
+	label {
+		font-weight:bold;
+	}
+/*  ==========================================================================
+	@ COMMON CLASS
+	========================================================================== */
+	.full {
+		width:100%;
+	}
+	.bold {
+		font-weight:800;
+		font-weight:bold;
+	}
+	.underline {
+		text-decoration:underline;
+	}
+	.right {
+		text-align:right;
+	}
+	.center {
+		position:absolute;
+		width:100%;
+		top:50%;
+		transform:translateY(-50%);
+	}
+
+	/* 삭제 */
+	.ajax {
+		display:none;
+	}
+/*  ==========================================================================
+	@ COLUMN
+	========================================================================== */
+	.col {
+		float:left;
+	}
+	.col_2 {
+		width:50%;
+	}
+	.col_3 {
+		width:33.33333333%;
+	}
+	.col_4 {
+		width:25%;
+	}
+	.col_group_2_15 {
+		padding-right:15px;
+	}
+	.col_group_2_15 .col {
+		width:50%;
+		margin-left:30px;
+		margin-right:-15px;
+	}
+	.col_group_2_15 .col:nth-child(3n+1) {
+		margin-left:0;
+	}
+
+
+    	.col_group_3_10 {
+		padding-right:20px;
+	}
+    
+
+
+	.col_group_3_10 .col {
+		width:33.33333333%;
+		margin-left:30px;
+		margin-right:-20px;
+	}
+	.col_group_3_10 .col:nth-child(3n+1) {
+		margin-left:0;
+	}
+	.col_group_3_15 {
+		padding-right:30px;
+	}
+	.col_group_3_15 .col {
+		width:33.33333333%;
+		margin-left:45px;
+		margin-right:-30px;
+	}
+	.col_group_3_15 .col:nth-child(3n+1) {
+		margin-left:0;
+	}
+	.col_group_4_15 {
+		padding-right:60px;
+	}
+	.col_group_4_15 .col {
+		width:33.33333333%;
+		margin-left:75px;
+		margin-right:-60px;
+	}
+	.col_group_4_15 .col:nth-child(3n+1) {
+		margin-left:0;
+	}
+/*  ==========================================================================
+	@ CONTAINER
+	========================================================================== */
+	.container {
+		position:relative;
+		width:92%;
+		height:100%;
+		margin:0 4%;
+	}
+/*  ==========================================================================
+	@ ROYALSLIDER
+	========================================================================== */
+	.rsSlider.bullet .rsBullets {
+		position:absolute;
+		width:100%;
+		height:10px;
+		bottom:10px;
+		text-align:center;
+	}
+	.rsSlider.bullet .rsBullet {
+		display:inline-block;
+		margin-left:5px;
+		vertical-align:top;
+		cursor:pointer;
+	}
+	.rsSlider.bullet .rsBullet:first-child {
+		margin-left:0;
+	}
+	.rsSlider.bullet .rsBullet span {
+		display:block;
+		width:10px;
+		height:10px;
+		background-color:#555555;
+	}
+	.rsSlider.bullet .rsBullet.rsNavSelected span {
+		background-color: #3a3a3a;
+	}
+/*  ==========================================================================
+	@ GRADIENT
+	========================================================================== */
+	.gradient {
+		background: #ffffff;
+		background: linear-gradient(138deg, #ffffff 0%, #ffffff 57%, #ffffff 100%);
+	}
+
+/*  ==========================================================================
+	@ SHADOW
+	========================================================================== */
+	.shadow_text {
+		text-shadow: 0px 1px 2px rgba(150, 150, 150, 0.1);
+	}
+	.shadow_box {
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1), 0 4px 8px 0 rgba(0,0,0,0.1) !important;
+	}
+/*  ==========================================================================
+	@ ROUND
+	========================================================================== */
+	.round_3 {
+		position:relative;
+		border-radius:3px;
+		-moz-border-radius:3px;
+		-webkit-border-radius:3px;
+		overflow:hidden;
+	}
+	.round_top_3 {
+		position:relative;
+		border-radius:3px 3px 0px 0px;
+		-moz-border-radius:3px 3px 0px 0px;
+		-webkit-border-radius:3px 3px 0px 0px;
+		overflow:hidden;
+	}
+	.round_bottom_3 {
+		position:relative;
+		border-radius:0px 0px 3px 3px;
+		-moz-border-radius:0px 0px 3px 3px;
+		-webkit-border-radius:0px 0px 3px 3px;
+		overflow:hidden;
+	}
+	.round_5 {
+		position:relative;
+		border-radius:5px;
+		-moz-border-radius:5px;
+		-webkit-border-radius:5px;
+		overflow:hidden;
+	}
+	.round_10 {
+		position:relative;
+		border-radius:10px;
+		-moz-border-radius:10px;
+		-webkit-border-radius:10px;
+		overflow:hidden;
+	}
+	.round_20 {
+		position:relative;
+		border-radius:20px;
+		-moz-border-radius:20px;
+		-webkit-border-radius:20px;
+		overflow:hidden;
+	}
+	.round_60 {
+		position:relative;
+		border-radius:60px;
+		-moz-border-radius:60px;
+		-webkit-border-radius:60px;
+		overflow:hidden;
+	}
+	.round_circle {
+		position:relative;
+		border-radius:50%;
+		-moz-border-radius:50%;
+		-webkit-border-radius:50%;
+		overflow:hidden;
+	}
+/*  ==========================================================================
+	@ TRANSITION
+	========================================================================== */
+	.ts_all {
+		-webkit-transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+		-moz-transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+		-o-transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+		transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1.000); /* easeInOutCubic */
+
+		-webkit-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000);
+		-moz-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000);
+		-o-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000);
+		transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000); /* easeInOutCubic */
+	}
+/*  ==========================================================================
+	@ HELPER
+	========================================================================== */
+	ul:before,
+	ul:after,
+	li:before,
+	li:after,
+	dl:before,
+	dl:after,
+	dd:before,
+	dd:after,
+	fieldset:before,
+	fieldset:after,
+	.container:before,
+	.container:after,
+	.row:before,
+	.row:after,
+	.col_group:before,
+	.col_group:after,
+	.clear:before,
+	.clear:after {
+		display:table;
+		content:" ";
+	}
+	ul:after,
+	li:after,
+	dl:after,
+	dd:after,
+	fieldset:after,
+	.container:after,
+	.row:after,
+	.col_group:after,
+	.clear:after {
+		clear:both;
+	}
+
+/*  ==========================================================================
+	@ CHAT.CSS
+	========================================================================== */
+	html,body {
+		font-size:13px;
+		width:100%;
+		height:100%;
+		overflow:hidden;
+	}
+	h1 span,
+	h2 span,
+	h3 span,
+	h4 span,
+	h5 span,
+	h6 span,
+	p span {
+		/*color:#3a3a3a;*/
+	}
+	i {
+		font-size:20px;
+	}
+
+
+
+/*  ==========================================================================
+	@ BUTTON
+	========================================================================== */
+	.btn_color_1 {
+		color:#ffffff !important;
+		background-color:#ce0000;
+	}
+	.btn_color_2 {
+		color:#ffffff !important;
+		background-color:#ce0000;
+	}
+	.btn_color_3 {
+		color:#ffffff !important;
+		background-color:#555555;
+	}
+	.btn_color_4 {
+		color:#ffffff !important;
+		background-color:#aaaaaa;
+	}
+	.btn_color_5 {
+		color: '#444444' !important;
+		background-color:#ffffff;
+	}
+	.btn_color_6 {
+		color:#ce0000 !important;
+		background-color:#ffffff;
+	}
+	.btn_sm {
+		padding:3px 6px;
+	}
+	.btn_sm i {
+		font-size:10px;
+		margin-right:5px;
+	}
+	.btn_md {
+		font-size:13px;
+		padding:5px 10px;
+	}
+	.btn_md i {
+		font-size:10px;
+		margin-right:10px;
+	}
+	.btn_lg {
+		font-size:13px;
+		padding:10px;
+	}
+	.btn_lg i {
+		font-size:15px;
+		margin-right:10px;
+	}
+
+    	.btn_full {
+		display:block;
+		width:100%;
+		font-size:13px;
+		text-align:center;
+		padding:10px 0;
+		margin-left:0;
+    }
+    
+
+
+
+
+	.btn_full i {
+		position:absolute;
+		top:50%;
+		right:0;
+		font-size:15px;
+		transform:translateY(-50%);
+		
+	}
+	.arrow {
+		width:200px;
+	}
+	.arrow i {
+		position:absolute;
+		top:50%;
+		right:0;
+		transform:translateY(-50%);
+	}
+/*  ==========================================================================
+	@ CHAT
+	========================================================================== */
+    #chat {
+        position:absolute;
+        width:100%;
+        height:100%;
+        background-color:#ffc16b;
+        overflow:hidden;
+		
+		opacity:0;
+		transform:scale(0.75);
+    }
+
+
+    /* HEADER */
+	#chat #header {
+		position:absolute;
+		top:0;
+		width:100%;
+		z-index:3;
+    }
+
+	#chat #header2 {
+		top:0;
+		width:100%;
+		z-index:3;
+        text-align: center;
+    }
+
+	#chat #header .ui_holder {
+		/*height:90px;*/
+		height:60px;
+		color:#ffffff;
+		line-height:60px;
+	}
+
+	#chat #header .ui_holder a .ico_ui_nav{
+		width:25px;
+	}
+
+	#chat #header .ui_holder .ui_right span {
+		display:inline-block;
+		line-height:normal;
+	}
+	#chat #header .ui_holder a {
+		color:#ffffff;
+	}
+    #chat #header .ui_holder .profile_holder .img {
+        float:left;
+        margin-right:10px;
+    }
+    #chat #header .ui_holder .profile_holder .img img {
+        height:60px;
+    }
+    #chat #header .ui_holder .profile_holder .name {
+        float:left;
+        font-size:20px;
+		font-weight:bold;
+        color:#000000;
+    }
+    /* HEADER ANIMATION */
+    #chat #header.active {
+    }
+	#chat #header.active .ui_holder {
+		height:60px;
+		line-height:60px;
+	}
+    #chat #header.active .ui_holder .profile_holder .img img {
+        height:35px;
+    }
+    #chat #header.active .ui_holder .profile_holder .name {
+        font-size:16px;
+        color:#ffffff;
+    }
+    /* MAIN */
+    #chat #main {
+        position:absolute;
+        width:100%;
+        top:50px;
+        bottom:50px;
+		z-index:1;
+    }
+
+
+
+
+    
+
+
+    #chat #main #talk {
+        position:absolute;
+        width:100%;
+        height:100%;
+        background-color:#ffc16b;
+        overflow-x:hidden;
+        overflow-y:scroll;
+        padding-bottom:15px;
+    }
+
+    
+
+    #chat #main #talk .talk_body .view_date {
+        display:block;
+        color:#ffffff;
+        font-size:12px;
+        text-align:center;
+        padding:3px 0;
+        background-color:#555555;
+        margin:15px 0;
+    }
+
+
+
+	#chat #main #talk .talk_body .view_date2 {
+        display: block;
+        color: #ffffff;
+        font-size: 12px;
+        text-align: center;
+        padding: 3px 0;
+        background-color:#555555;
+        margin: 15px 0 0;
+	}
+
+
+
+
+
+
+
+
+    #chat #main #talk #more_txt {
+    	font-weight:bold;
+    	color:#000;
+    	text-decoration: underline;
+    }
+    /* ANSWER COMMON */
+    #chat #main #talk .talk_body .ans {
+        position:relative;
+    }
+    #chat #main #talk .talk_body .ans .messages .message {
+        position:relative;
+        margin-bottom:5px;
+    }
+    #chat #main #talk .talk_body .ans .messages .message .text {
+        position:relative;
+        display:inline-block;
+        text-align:left;
+        word-break:break-all;
+        max-width:80%;
+        padding:10px;
+    }
+    #chat #main #talk .talk_body .ans .messages .message .time {
+        display:inline-block;
+        font-size:12px;
+        font-weight:bold;
+        margin-bottom:5px;
+        vertical-align:bottom;
+    }
+    #chat #main #talk .talk_body .ans .messages .message .btn_holder li {
+        margin-top:5px;
+    }
+	#chat #main #talk .talk_body .ans .messages .message .btn_holder li a {
+        width:200px;
+        background-color: #ffffff;
+    }
+    /* CHATBOT */
+    #chat #main #talk .talk_body .ans.left .profile {
+        position:absolute;
+        vertical-align:top;
+        margin-right:5px;
+    }
+    #chat #main #talk .talk_body .ans.left .profile img {
+        width:35px;
+    }
+    #chat #main #talk .talk_body .ans.left .messages {
+        margin-left:45px;
+        margin-top:10px;
+        vertical-align:top;
+    }
+    #chat #main #talk .talk_body .ans.left .messages .message .text {
+        color:#444444;
+        background-color:#ffffff;
+        margin-right:5px;
+
+        border-radius:0px 10px 10px 10px;
+		-moz-border-radius:0px 10px 10px 10px;
+		-webkit-border-radius:0px 10px 10px 10px;
+        overflow:hidden;
+        line-height: 18px;
+    }
+    /* PERSON */
+    #chat #main #talk .talk_body .ans.right .messages {
+        text-align:right;
+    }
+    #chat #main #talk .talk_body .ans.right .messages .message .text {
+        color:#444444;
+        background-color:#ffffff;
+        margin-left:5px;
+
+        border-radius:10px 0px 10px 10px;
+        -moz-border-radius:10px 0px 10px 10px;
+        -webkit-border-radius:10px 0px 10px 10px;
+        overflow:hidden;
+    }
+    /* FOOTER */
+    #chat #footer {
+        position:fixed;
+        bottom:0;
+        left:0;
+        width:100%;
+        background-color:#ffc16b;
+        z-index:2;
+    }
+    #chat #footer .ui_holder {
+
+        padding:7px 0;
+        margin-bottom:10px;
+    }
+    #chat #footer .ui_holder .col_group div:nth-child(1) {
+        float:left;
+        width:25px;
+    }
+    #chat #footer .ui_holder .col_group div:nth-child(2) {
+        float:right;
+        width:25px;
+        margin-top: 5px;
+    }
+    #chat #footer .ui_holder .col_group div:nth-child(3) {
+		position:relative;
+        margin:0 40px;
+    }
+	#chat #footer .ui_holder .col_group div:nth-child(3) button {
+		position:absolute;
+		top:8px;
+		left:10px;
+		color:#555555;
+		z-index:1;
+		
+	}
+    #chat #footer .ui_holder #quick_slider_open {
+        color:#3a3a3a;
+        line-height:36px;
+    }
+    #chat #footer .ui_holder input#talkText {
+        width:100%;
+        border:none;
+        background-color:#eeeeee;
+        padding:9px 15px 9px 38px;
+    }
+    #chat #footer .ui_holder #send {
+        color:#3a3a3a;
+        line-height:36px;
+    }
+    #chat #footer #quick_slider li {
+        margin-bottom:10px;
+        
+    }
+    #chat #footer #quick_slider {
+        position:relative;
+        width:100%;
+        height:112px;
+    }
+/*  ==========================================================================
+	@ LOADING
+	========================================================================== */
+	.loading:before{
+		content:"";
+		position:absolute;
+		top:0px;
+		left:-10px;
+		height:4px;
+		width:4px;
+		border-radius:4px;
+		-webkit-animation:loader10g 1200ms ease-in-out infinite;
+				animation:loader10g 1200ms ease-in-out infinite;
+	}
+
+	.loading {
+		position: relative;
+		width:4px;
+		height:4px;
+		top:50%;
+		left:0%;
+		margin:5px 10px;
+		border-radius:4px;
+		-webkit-animation:loader10m 1200ms ease-in-out infinite;
+				animation:loader10m 1200ms ease-in-out infinite;
+	}
+	.loading:after{
+		content:"";
+		position:absolute;
+		top:0px;
+		left:10px;
+		height:4px;
+		width:4px;
+		border-radius:4px;
+		-webkit-animation: loader10d 1200ms ease-in-out infinite;
+				animation: loader10d 1200ms ease-in-out infinite;
+	}
+
+	@-webkit-keyframes loader10g{
+		0%{background-color: #3a3a3a;}
+		25%{background-color: #3a3a3a9c;}
+		50%{background-color: #3a3a3a;}
+		75%{background-color: #3a3a3a;}
+		100%{background-color: #3a3a3a;}
+	}
+	@keyframes loader10g{
+		0%{background-color: #3a3a3a;}
+		25%{background-color: #3a3a3a9c;}
+		50%{background-color: #3a3a3a;}
+		75%{background-color: #3a3a3a;}
+		100%{background-color: #3a3a3a;}
+	}
+
+	@-webkit-keyframes loader10m{
+		0%{background-color: #3a3a3a;}
+		25%{background-color: #3a3a3a9c;}
+		50%{background-color: #3a3a3a;}
+		75%{background-color: #3a3a3a;}
+		100%{background-color: #3a3a3a;}
+	}
+	@keyframes loader10m{
+		0%{background-color: #3a3a3a;}
+		25%{background-color: #3a3a3a9c;}
+		50%{background-color: #3a3a3a;}
+		75%{background-color: #3a3a3a;}
+		100%{background-color: #3a3a3a;}
+	}
+
+	@-webkit-keyframes loader10d{
+		0%{background-color: #3a3a3a;}
+		25%{background-color: #3a3a3a9c;}
+		50%{background-color: #3a3a3a;}
+		75%{background-color: #3a3a3a;}
+		100%{background-color: #3a3a3a;}
+	}
+	@keyframes loader10d{
+		0%{background-color: #3a3a3a;}
+		25%{background-color: #3a3a3a9c;}
+		50%{background-color: #3a3a3a;}
+		75%{background-color: #3a3a3a;}
+		100%{background-color: #3a3a3a;}
+	}
+/*  ==========================================================================
+	@ UI HOLDER
+	========================================================================== */	
+	.ui_holder {
+		position:relative;
+		text-align:center;
+	}
+	.ui_holder .ui_left {
+		/*position:absolute;
+		top:50%;*/
+		left:0;
+
+		transform:translateY(-50%);
+	}
+	.ui_holder .ui_right {
+		position:absolute;
+		top:50%;
+		right:0;
+
+		transform:translateY(-20%);
+	}
+
+
+
+
+/*  ==========================================================================
+	@ 슬라이드 이미지
+	========================================================================== */	
+ 
+
+.message_balloon_wrap{
+	background-color:#fff;	
+  border-radius: 1em 1em 1em 1em;
+}
+  .goods_images {
+    overflow: hidden;
+    position: relative;
+   /* background-color: #d8d8d8;*/
+    text-align: center;
+ 		border-radius: 1em 1em 0em 0em;
+}
+		
+  .message_balloon .contents_area {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    padding: 12px 14px;
+    background: #fff;
+    word-break: break-all;
+ 	  border-radius: 1em 1em 1em 1em;
+}
+  .message_balloon .con_composite {
+    font-size: 14px;
+    line-height: 1.5;
+}
+.list_btn {
+    max-height: 410px;
+    overflow: hidden;
+    position: relative;
+    background-color: #eeeeee;
+    width: 200px;
+    border-radius: 0em 0em 1em 1em;
+}
+.list_btn a {
+    display: block;
+    overflow: hidden;
+    padding: 13px 20px 11px;
+    border-top: 1px solid #eee;
+    background-color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    color: #466dfc;
+    line-height: 1.2;
+    text-align:center;
+}
+
+
+
+
+.btn-color {
+  color: #ffffff;
+  background-color: #ce0000;
+  border-color: #ce0000;
+}
+
+ .btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+
+
+
+.slide_btn {
+    /*background:#eeeeee !important;*/
+    text-align: center;
+}
+.slide_btn img{width:100px;}
+ 
+
+.fixed_option_box.close {
+
+	transform:translateY(0);
+	-ms-transform:translateY(0);
+	-moz-transform:translateY(0);
+	-webkit-transform:translateY(0);
+	-o-transform:translateY(0);
+
+	transition: all .0s;
+	-moz-transition: all .0s;
+	-webkit-transition: all .0s;
+	-o-transition: all .0s;
+
+}
+.fixed_option_box {
+	bottom: 33px;
+    left:0; width:100%; z-index:99997;
+	transform:translateY(120%);
+	-ms-transform:translateY(120%);
+	-moz-transform:translateY(120%);
+	-webkit-transform:translateY(120%);
+	-o-transform:translateY(120%);
+	transition: all .2s;
+	-moz-transition: all .2s;
+	-webkit-transition: all .2s;
+	-o-transition: all .2s;
+}
+
+
+
+.footbtn {
+    display: block;
+    position: absolute;
+    top: 33px;
+    left: 50%;
+    width: 104px;
+    height: 26px;
+    margin-left: -52px;
+    border-radius: 8px 8px 0 0;
+    color: #fff;
+    font-size: 12px;
+    line-height: 26px;
+    text-align: center;
+}
+
+
+.box {
+    position: relative;
+    border-radius: 3px;
+    background: #ffffff;
+    border-top: 3px solid #d2d6de;
+
+    width: 100%;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.box-body {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    padding: 10px;
+}
+
+
+.btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover, .open>.dropdown-toggle.btn-default.focus, .open>.dropdown-toggle.btn-default:focus, .open>.dropdown-toggle.btn-default:hover {
+    color: #333;
+    background-color: #d4d4d4;
+    border-color: #8c8c8c;
+}
+.btn-default:hover, .btn-default:active, .btn-default.hover {
+    background-color: #e7e7e7;
+}
+.btn:active {
+    -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,0.125);
+    -moz-box-shadow: inset 0 3px 5px rgba(0,0,0,0.125);
+    box-shadow: inset 0 3px 5px rgba(0,0,0,0.125);
+}
+.btn-default.active, .btn-default:active, .open>.dropdown-toggle.btn-default {
+    color: #333;
+    background-color: #e6e6e6;
+    background-image: none;
+    border-color: #adadad;
+}
+.btn-default:hover {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+}
+
+.btn.focus, .btn:focus, .btn:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+.btn-slide {
+    border-radius: 3px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid transparent;
+}
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.btn-slide {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+	padding: 6px 12px;
+}
+.btn-block+.btn-block {
+    margin-top: 5px;
+}
+.btn-default {
+    background-color: #ce0000;
+    color:#ffffff;
+    /*border-color: #ddd;*/
+}
+
+
+
+
+
+
+.header_img{
+    height: 60px;
+    position: absolute;
+    left: 50%;
+    top: 60px;
+    transform: translate(-50%,-100%);
+    z-index: 99;
+}
+
+
+
+
+.popup_check_wrap{
+	background-color:rgba(0,0,0,0.7);
+	width:100%;
+	position:absolute;
+	top:0;
+	z-index:999;
+	max-width:720px;
+	margin:0 auto;
+}
+
+.popup_logout_wrap{
+	background-color:rgba(0,0,0,0.7);
+	width:100%;
+	position:absolute;
+	top:0;
+	z-index:999;
+	/*max-width:720px;*/
+	margin:0 auto;
+}
+
+
+.popup_check_box{
+	height:80%;
+	display:table;
+	width:100%;
+}
+
+
+.popup_check_box2{
+	display:table;
+	width:100%;
+    position: absolute;
+    bottom: 18% ;
+}
+
+
+.popup_check{
+	display:table-cell;
+	vertical-align:middle;
+	width:100%;
+}
+.pop_wrap{
+	max-width: 300px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	font-size:16px;
+}
+.pop_top_txt{
+	font-size: 18px;
+	text-align: center;
+    line-height: 35px;
+    /* border-bottom: 1px solid #ddd; */
+    box-sizing: border-box;
+    padding: 10px 15px 6px;
+    background-color: #ffffff;
+    color: #333333;
+	vertical-align:middle;
+}
+.pop_del_df{
+	float:right;
+	padding-top:3px;
+	box-sizing: border-box;
+}
+.pop_del_df svg{
+	width: 15px;
+    vertical-align:middle;
+}
+.pop_del_df img{
+	width: 15px;
+    vertical-align:middle;
+	margin-bottom:10px;
+}
+.pop_del_df .close{
+	fill:#fff;	
+}
+.pop_middle_txt{
+	display:block;
+	text-align:center;
+	background-color:#fff;
+	color:#333333;
+	padding:12px 10px 20px 10px;
+}
+
+.pop_middle_sm_txt{
+	color:#333333;
+	font-size:13px;
+	text-align:center;
+	line-height: 25px;
+}
+.pop_middle_sm_txt p{
+	color:#333333;
+	font-size:13px;
+	text-align:center;
+	line-height: 25px;
+}
+.pop_middle_sm_txt h3{
+	font-size: 18px;
+	margin-top: 5px;
+	margin-bottom: 0px;
+	line-height: 26px;
+}
+.pop_middle_sm_txt h4{
+	color:#ed1b23;
+	font-size:15px;
+	font-weight:bold;
+	margin-bottom: 0px;
+	line-height: 25px;
+}
+.pop_inline{
+	width:42%;
+	display:inline-table;
+	text-align:center;
+	vertical-align: top;
+}
+.pop_inline img{
+	width:60%;
+}
+.popup_check .pop_bottom_btn a{
+	width:47%;
+	display:inline-block;
+	padding:12px 0px;
+	box-sizing:border-box;
+	text-align:center;
+}
+.cancel_left{
+	border-radius: 3px;
+    width: 85%;
+	background-color:#ddd;
+	color:#666;
+}
+
+.ok_right{
+	border-radius: 3px;
+    width: 90%;
+	background-color: #ed1b23;
+	color: #ffffff;
+}
+.pop_bottom_btn{
+	background-color: #ffffff;
+	padding:10px 10px;
+	height:62px;
+	border-top:1px solid #dadada; 
+	text-align:center;
+}
+.pop_middle_txt .modal_img {
+	margin-left:20px;
+	padding:10px 10px;
+	vertical-align:middle;
+}
+.modal_img {
+	max-width: 40%;
+	margin-bottom: 10px;
+	}
+.clearfix{
+	content:"";
+	display:block;
+	clear:both;
+}
+ 
+
+
+
+</style>    
+
+
+
+<!-- TOP SCRIPTS >-->
+</head>
+<body>
+
+ 
+
+<!--< CHAT -->
+<div id="chat" class="chat_open" style="transform: scale(1, 1); opacity: 1;">
+    <input type="hidden" id="other_chat" value="0" class="placeholdercolor">
+    <input type="hidden" id="userid" value="33d37c13-8510-4b67-8e1e-13fc47a1f80f" class="placeholdercolor">
+
+    <input type="hidden" id="uuid" value="33d37c13-8510-4b67-8e1e-13fc47a1f80f" class="placeholdercolor">
+
+    
+    <input type="hidden" id="profile_img" value="https://curveschat.wowdream.kr/_data/images/16125144778000.png" class="placeholdercolor">
+    <input type="hidden" id="welcom_msg" value="안녕하세요!||국내 최고의 기차여행 전문 여행사, 홍익여행사입니다." class="placeholdercolor">
+    <input type="hidden" id="domain_start_sentence" value="궁금하신 내용을 직접 입력하시거나 아래에서 선택해주시면 안내해드릴게요." class="placeholdercolor">
+
+    <input type="hidden" id="domain_start_sentence2" value="" class="placeholdercolor">
+    <input type="hidden" id="domain_start_sentence3" value="" class="placeholdercolor">
+    <input type="hidden" id="engine_no" value="" class="placeholdercolor">
+
+
+    <input type="hidden" name="edu_excel_file" id="edu_excel_file" value="" class="placeholdercolor">
+    <input type="hidden" name="edu_video_file" id="edu_video_file" value="" class="placeholdercolor">
+    <input type="hidden" name="edu_image_file" id="edu_image_file" value="" class="placeholdercolor">
+    <input type="hidden" name="edu_image_file2" id="edu_image_file2" value="" class="placeholdercolor">
+    <input type="hidden" name="edu_video_url" id="edu_video_url" value="" class="placeholdercolor">   
+    <input type="hidden" name="edu_engine_name" id="edu_engine_name" value="" class="placeholdercolor">   
+    
+    <input type="hidden" name="push_uid" id="push_uid" value="" class="placeholdercolor">    
+
+    <input type="hidden" name="test_eday" id="test_eday" value="01월01일 09시00분" class="placeholdercolor">    
+    <input type="hidden" name="ICON_IMG" id="ICON_IMG" value="" class="placeholdercolor">    
+
+
+    <input type="hidden" id="domain_start_sentence_list" value="여행상품 예약 방법@@SNS 할인 이벤트@@여행상품 추천" class="placeholdercolor">
+    <input type="hidden" id="customer_no" value="" class="placeholdercolor">
+    <input type="hidden" id="customer_name" value="" class="placeholdercolor">
+    <input type="hidden" id="customer_tel_no" value="" class="placeholdercolor">
+    <input type="hidden" id="protocol" value="https://" class="placeholdercolor">
+    <input type="hidden" id="wss_port" value="8001" class="placeholdercolor">
+    <input type="hidden" id="select_info_msg" value="찾으시는 질문이 아래 있으면 선택해주세요! 내용이 없으면 질문을 더 자세히 입력해주세요! " class="placeholdercolor">
+    <input type="hidden" id="site_key" value="HONGIK" class="placeholdercolor">
+	
+	<input type="hidden" id="chat_history_chenk" value="0" class="placeholdercolor">
+
+	<input type="hidden" id="qa_record" value="N" class="placeholdercolor">
+
+    <!-- 디자인 타입 -->
+    <input type="hidden" id="chat_design_tp" value="3" class="placeholdercolor">
+    <!-- 디자인 타입 -->
+
+
+
+    <input type="hidden" name="qa_YN" id="qa_YN" value="" class="placeholdercolor">
+
+
+    <input type="hidden" name="push_gubun" id="push_gubun" value="" class="placeholdercolor">
+
+    <input type="hidden" name="push_research_gubun" id="push_research_gubun" value="" class="placeholdercolor">
+
+    <input type="hidden" name="visit_id" id="visit_id" value="f778ced4-c60b-4c12-9422-8a5b40f105b1" class="placeholdercolor">
+
+    <input type="hidden" name="chatting_last_time" id="chatting_last_time" value="1641537919868" class="placeholdercolor">
+    <input type="hidden" name="chatting_visit_time" id="chatting_visit_time" class="placeholdercolor" value="1641537964889">
+
+
+    <input type="hidden" name="chatting_fileupload" id="chatting_fileupload" class="placeholdercolor">
+
+
+
+
+<input type="hidden" name="quickbtn" class="quickbtn placeholdercolor" value="&lt;section class=&#39;variable slider&#39;&gt;&lt;div&gt;&lt;button type=&#39;button&#39; class=&#39;btn btn-color&#39; onclick=&#39;talk_start_quick_click(0);this.disabled=true;&#39;&gt;여행상품 예약 방법&lt;/button&gt;&lt;/div&gt;&lt;div&gt;&lt;button type=&#39;button&#39; class=&#39;btn btn-color&#39; onclick=&#39;talk_start_quick_click(1);this.disabled=true;&#39;&gt;SNS 할인 이벤트&lt;/button&gt;&lt;/div&gt;&lt;div&gt;&lt;button type=&#39;button&#39; class=&#39;btn btn-color&#39; onclick=&#39;talk_start_quick_click(2);this.disabled=true;&#39;&gt;여행상품 추천&lt;/button&gt;&lt;/div&gt;&lt;/section&gt;">
+    <!--< HEADER -->
+
+    
+    <div id="header" class="gradient ts_all">
+        <div class="container">
+            <div class="row">
+                <div class="ui_holder">
+                    <img src="./static/images/16125144771000.png" class="header_img">
+
+
+
+
+                    <div class="ui_right">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <!-- HEADER > -->
+
+
+
+    <!--< MAIN -->
+    <div id="main">
+        <div class="container">
+            <div class="row">
+				<!--< CONTENTS -->
+                <div id="talk" class="contents" style="padding-bottom: 120px;">
+                    <div class="talk_body">
+
+                        
+
+                        <div class="view_date round_20">
+                            2022년 01월 07일 금요일                        </div>
+                    <div class="ans left story" style="opacity: 1; transform: translate(0px, 0px);">			<div class="clear">				<div class="profile round_20"><img src="./static/images/16125144778000.png"></div>				<div class="messages"><div class="message" style="opacity: 1; transform: translate(20px, 0px);">		<div class="text" style="margin-left: -20px;">안녕하세요!</div>	</div>					<div class="message" style="opacity: 1; transform: translate(20px, 0px);">		<div class="text" style="margin-left: -20px;">국내 최고의 기차여행 전문 여행사, 홍익여행사입니다.</div>	</div><div class="message" style="opacity: 1; transform: translate(20px, 0px);">		<div class="text" style="margin-left: -20px;">궁금하신 내용을 직접 입력하시거나 아래에서 선택해주시면 안내해드릴게요.</div>	<div class="time"><small>오후 3:45</small></div></div></div>				</div>			</div>		</div>
+                </div>
+				<!-- CONTENTS >-->
+            </div>
+        </div>
+    </div>
+    <!-- MAIN > -->
+
+
+    <!-- 모달 -->
+    <style>
+#progress-bar {
+    background-color: #12CC1A;
+    height:20px;color: #FFFFFF;
+    width:0%;
+    -webkit-transition: width .3s;-moz-transition: width .3s;
+    transition: width .3s;
+}
+#progress-div {
+    width:250px;
+    border:#0FA015 1px solid;
+    margin:30px 0px;
+    border-radius:4px;
+    text-align:center;
+}
+#targetLayer{
+    width:100%;
+    text-align:center;
+}
+
+
+.popup_check .pop_bottom_btn input {
+    width: 47%;
+    display: inline-block;
+    padding: 12px 0px;
+    box-sizing: border-box;
+    text-align: center;
+}
+

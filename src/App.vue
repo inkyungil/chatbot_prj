@@ -1,26 +1,25 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<ChatHeader/>
+<ChatBody/>
+<ChatFooter/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import "../src/static/css/chatbot.css"; 
+import ChatHeader from './components/ChatHeader.vue'
+import ChatBody from './components/ChatBody.vue'
+import ChatFooter from './components/ChatFooter.vue'
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
+    ChatHeader,
+    ChatBody,
+    ChatFooter
+
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
