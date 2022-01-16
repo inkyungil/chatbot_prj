@@ -174,7 +174,7 @@ body{margin:0}
 		transform:translateY(-50%);
 	}
 
-	/* »èÁ¦ */
+	/* ï¿½ï¿½ï¿½ï¿½ */
 	.ajax {
 		display:none;
 	}
@@ -725,9 +725,8 @@ body{margin:0}
         z-index:2;
     }
     #chat #footer .ui_holder {
-
         padding:7px 0;
-        margin-bottom:10px;
+        /* margin-bottom:10px;*/
     }
     #chat #footer .ui_holder .col_group div:nth-child(1) {
         float:left;
@@ -762,7 +761,7 @@ body{margin:0}
     }
     #chat #footer .ui_holder #send {
         color:#3a3a3a;
-        line-height:36px;
+        line-height:20px;
     }
     #chat #footer #quick_slider li {
         margin-bottom:10px;
@@ -881,7 +880,7 @@ body{margin:0}
 
 
 /*  ==========================================================================
-	@ ½½¶óÀÌµå ÀÌ¹ÌÁö
+	@ ï¿½ï¿½ï¿½ï¿½ï¿½Ìµï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½
 	========================================================================== */	
  
 

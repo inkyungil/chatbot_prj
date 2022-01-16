@@ -28,28 +28,6 @@
             </div>
           </div>
         </div>
-        <div id="quick_slider" class="rsSlider bullet rsHor rsWithBullets" style="display: none;">
-          <div class="rsOverflow grab-cursor" style="width: 345px; height: 112px;">
-            <div class="rsContainer" style="transition-duration: 0s; transform: translate3d(0px, 0px, 0px);">
-              <div style="left: 0px;" class="rsSlide ">
-                <div class="rsContent" style="visibility: visible; opacity: 1; transition: opacity 400ms ease-in-out 0s;">
-                  <ul class="col_group_3_10">
-                    <li class="col">
-                    <button class="btn_full btn_color_2 round_3 ts_all" onclick="talk_start_click('여행상품 예약 방법')">여행상품 예약 방법</button>
-                    </li>
-                    <li class="col">
-                    <button class="btn_full btn_color_2 round_3 ts_all" onclick="talk_start_click('SNS 할인 이벤트')">SNS 할인 이벤트</button>
-                    </li>
-                    <li class="col">
-                    <button class="btn_full btn_color_2 round_3 ts_all" onclick="talk_start_click('여행상품 추천')">여행상품 추천</button>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="rsNav rsBullets"><div class="rsNavItem rsBullet rsNavSelected"><span class="round_10 ts_all"></span></div></div>
-        </div>
       </div>
     </div>
   </div>
